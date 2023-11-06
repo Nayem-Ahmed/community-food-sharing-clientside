@@ -61,7 +61,7 @@ const Signup = () => {
     }
     return (
 
-        <div className="mt-16 relative">
+        <div className="mt-10 relative">
             <div className="hero min-h-screen md:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
                 <div className="hero-content">
                     <div className="card w-full max-w-xl shadow-2xl bg-base-300">

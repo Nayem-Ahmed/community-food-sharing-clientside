@@ -47,7 +47,7 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-16 relative">
+        <div className="mt-10 relative">
             <div className="hero min-h-screen  md:bg-gradient-to-r from-indigo-500 relative  ">
 
                 <div className="hero-content ">

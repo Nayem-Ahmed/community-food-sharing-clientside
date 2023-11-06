@@ -2,7 +2,7 @@ import flogo from '../assets/logo.png'
 
 const Footer = () => {
     return (
-        <footer className="footer items-center p-4 bg-base-100 ">
+        <footer className="footer items-center p-4 bg-base-100 shadow-md">
         <aside className="items-center grid-flow-col">
            <img className='text-white w-48 mr-8' src={flogo}alt="" /> 
            
