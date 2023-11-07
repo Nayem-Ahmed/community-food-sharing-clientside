@@ -8,6 +8,7 @@ import Availablefoods from "../Components/Availablefoods";
 import Addfoods from "../Components/AddFoods";
 import Foodrequest from "../Components/FoodRequest";
 import Managefoods from "../Components/ManageFoods";
+import Privetrout from "./Privetrout";
 
 
 
@@ -23,15 +24,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "/availablefoods",
-                element: <Availablefoods></Availablefoods>,
+                element: <Privetrout><Availablefoods></Availablefoods></Privetrout>,
             },
             {
                 path: "/addfood",
-                element: <Addfoods></Addfoods>,
+                element: <Privetrout><Addfoods></Addfoods></Privetrout>,
             },
             {
                 path: "/managefoods",
-                element: <Managefoods></Managefoods>,
+                element: <Privetrout><Managefoods></Managefoods></Privetrout>,
             },
             {
                 path: "/foodrequest",

@@ -8,17 +8,17 @@ const Addfoods = () => {
 
     const handleaddfood = (e) => {
         e.preventDefault()
-        const demail = user?.email;
-        const dname = user?.displayName;
-        const dimg = user?.photoURL;
-        const fname = e.target.foodname.value;
-        const fphoto = e.target.photo.value;
-        const quantity = e.target.quantity.value;
-        const location = e.target.location.value;
-        const date = e.target.date.value;
-        const notes =e.target.notes.value;
+        const donator_email = user?.email;
+        const donator_name = user?.displayName;
+        const donator_image = user?.photoURL;
+        const food_name = e.target.foodname.value;
+        const food_image = e.target.photo.value;
+        const food_quantity = e.target.quantity.value;
+        const pickup_location = e.target.location.value;
+        const expired_date_time = e.target.date.value;
+        const additional_notes =e.target.notes.value;
 
-        const addfood = {demail,dname ,dimg,fname,fphoto,quantity,location,date,notes}
+        const addfood = {food_image,food_name,donator_image,donator_name,food_quantity,pickup_location,expired_date_time,additional_notes,donator_email}
 
         // send data database
         fetch('http://localhost:5000/addfoods',{
@@ -32,9 +32,7 @@ const Addfoods = () => {
         .then(data=>{
             console.log(data)
             if (data.acknowledged) {
-                swal("Added a food!", "You clicked the button!", "success");
-                
-
+                swal("Added a food!", "You clicked the button!", "success");              
                 
             }
         })

@@ -2,7 +2,9 @@ import React from 'react';
 
 const Recipe = () => {
     return (
-        <div className='flex flex-col md:flex-row gap-5 my-9'>
+        <div>
+            {/* <h1 className='text-center font-bold text-3xl mt-5'>Blog Section</h1> */}
+            <div className='flex flex-col md:flex-row gap-5 my-9'>
             <div className='basis-2/3'>
                 <img className='h-96 w-full' src="https://i.ibb.co/jzHmNzQ/h6-img-1.jpg" alt="" />
                 <h2 className='md:text-4xl font-semibold mb-2 my-2'>Cupcakes with pistachio<br></br> frosting</h2>
@@ -24,6 +26,7 @@ const Recipe = () => {
                 <p className='mt-3 text-gray-500'> The orange's bright color and zesty character evoke a feeling of energy and positivity.</p>
             </div>
 
+        </div>
         </div>
     );
 };
