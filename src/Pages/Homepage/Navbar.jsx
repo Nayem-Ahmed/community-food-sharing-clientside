@@ -40,12 +40,12 @@ const Navbar = () => {
                     <div className='flex items-center gap-2'>
                     <img className='rounded-full w-8' src={user.photoURL} alt="" />
                     <span>{user.displayName}</span>                        
-                    <button onClick={logOut} className="btn bg-black text-white">Logout</button>
+                    <button onClick={logOut} className="btn bg-black btn-xs sm:btn-sm md:btn-md  text-white">Logout</button>
                    
                     
                 </div>
                 :
-                <Link to = "/login"><button className="btn bg-black text-white">Login</button></Link>
+                <Link to = "/login"><button className="btn btn-xs sm:btn-sm md:btn-md  bg-black text-white">Login</button></Link>
                 }
             </div>
         </div>

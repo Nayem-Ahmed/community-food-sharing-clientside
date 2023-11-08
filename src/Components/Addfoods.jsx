@@ -40,8 +40,8 @@ const Addfoods = () => {
 
     }
     return (
-        <div className="hero min-h-screen mt-8">
-            <form onSubmit={handleaddfood} className="card-body lg:w-7/12  shadow-md">
+        <div className="hero min-h-screen mt-8 ">
+            <form onSubmit={handleaddfood} className="card-body lg:w-7/12  shadow-md bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">
                 <div className="grid md:grid-cols-2 gap-4">
                     <div className="form-control">
                         <label className="label">

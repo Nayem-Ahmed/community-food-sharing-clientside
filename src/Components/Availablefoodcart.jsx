@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
+ 
 
-const Featurecard = ({ featurecard }) => {
-    const { _id,food_image, food_name, donator_image, donator_name, donator_email, food_quantity, pickup_location, expired_date_time, additional_notes } = featurecard;
+const Availablefoodcart = ({availablecart}) => {
+    const { _id,food_image, food_name, donator_image, donator_name, donator_email, food_quantity, pickup_location, expired_date_time, additional_notes } = availablecart;
     return (
         <div className="card  bg-base-100 shadow-xl">
             <figure><img className="h-56 w-full" src={food_image} alt="Shoes" /></figure>
@@ -20,11 +21,11 @@ const Featurecard = ({ featurecard }) => {
                         <p>{donator_name}</p>
                         <p>{donator_email}</p>
                     </div>
-                       <Link to={`/singlepagedetails/${_id}`}><button className="btn mt-2 bg-[#e67e22] text-white">view details</button></Link>
+                    <Link to={`/singlepagedetails/${_id}`}><button className="btn mt-2 bg-[#e67e22] text-white">view details</button></Link>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Featurecard;
+export default Availablefoodcart;
