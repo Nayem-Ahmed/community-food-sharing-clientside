@@ -44,15 +44,15 @@ const Managefoods = () => {
             .then(data=>{
                 if (data.deletedCount > 0) {
                     
-            //   Swal.fire({
-            //     title: "Deleted!",
-            //     text: "Your file has been deleted.",
-            //     icon: "success"
-            //   });
-            //   const reamaining = users.filter(deletefood=> deletefood._id !== id);
-            //   setUsers(reamaining)
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+              });
+              const reamaining = users.filter(deletefood=> deletefood._id !== id);
+              setUsers(reamaining)
                     
-            //     }
+                }
             })
 
             }
