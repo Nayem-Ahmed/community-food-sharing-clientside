@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 // import swal from "sweetalert";
@@ -5,15 +6,17 @@ import { toast } from "react-toastify";
 
 const Singlepage = () => {
     const singleloader = useLoaderData();
+    const [moneyinput,setMoneyinput]=useState('')
+   
+
     const { _id, food_image, food_name, donator_image, donator_name, donator_email, food_quantity, pickup_location, expired_date_time, additional_notes } = singleloader;
 
     const handlerequest = (e) => {
         e.preventDefault()
+        console.log( moneyinput);
+        
 
-        const donation_money = e.target.money.value;
-        const additional_notes = e.target.notes.value;
-
-        const request = { food_image, food_name, donator_image, donator_name, food_quantity, pickup_location, expired_date_time, additional_notes, donator_email, donation_money }
+        const request = { food_image, food_name, donator_image, donator_name, food_quantity, pickup_location, expired_date_time, additional_notes, donator_email, moneyinput }
         // send data database
         fetch('http://localhost:5000/request', {
             method: 'POST',
@@ -87,19 +90,18 @@ const Singlepage = () => {
 
                         <button onClick={() => document.getElementById('my_modal_3').showModal()} className="btn bg-[#e74c3c] text-white mt-4">Food Request</button>
                         {/* You can open the modal using document.getElementById('ID').showModal() method */}
-
                         <dialog id="my_modal_3" className="modal">
                             <div className="modal-box">
-                                <form onSubmit={handlerequest} method="dialog">
+                                <form  method="dialog">
                                     {/* if there is a button in the form, it will close the modal */}
                                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => document.getElementById('my_modal_3').close()}>✕</button>
-                                    <input type="text" placeholder="Donation Money" name="money" className="input w-full input-bordered mb-3 mr-2" />
-                                    <textarea placeholder="Enter your notes" defaultValue={additional_notes} name="notes" className="input w-full input-bordered" required />
+                                    <input type="text" placeholder="Donation Money" name="money" onChange={(e)=>setMoneyinput(e.target.value)} className="input w-full input-bordered mb-3 mr-2" />
+                                    <textarea placeholder="Enter your notes" defaultValue={additional_notes} name="notes"  className="input w-full input-bordered" required />
 
-                                    <div className="text-center">
-                                        <button type="submit" className="btn  bg-[#e74c3c] text-white mt-4">Food Request</button>
-                                    </div>
                                 </form>
+                                    <div className="text-center">
+                                        <button onClick={handlerequest} type="submit" className="btn  bg-[#e74c3c] text-white mt-4">Food Request</button>
+                                    </div>
                             </div>
                         </dialog>
                     </div>

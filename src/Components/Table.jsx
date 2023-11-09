@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Table = ({table,handledelete}) => {
     const{_id,food_name, food_image,donator_name,donator_email} = table;
@@ -11,7 +12,7 @@ const Table = ({table,handledelete}) => {
             <td>{donator_email}</td>
             <td><button onClick={() => handledelete(_id)} className='btn btn-error'>Delete</button></td>
             <td><button className='btn btn-accent'>Update</button></td>
-            <td><button className='btn btn-primary'>Manage</button></td>
+            <td><Link to={`/manage/${_id}`}><button className='btn btn-primary'>Manage</button></Link></td>
           
             
         </tr>

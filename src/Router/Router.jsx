@@ -10,6 +10,7 @@ import Managefoods from "../Components/ManageFoods";
 import Privetrout from "./Privetrout";
 import AvailableFoods from "../Components/AvailableFoods";
 import Singlepage from "../Components/Singlepage";
+import Manage from "../Components/Manage";
 
 
 
@@ -21,13 +22,13 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                loader:()=>fetch('http://localhost:5000/addfoods'),
+                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
                 element: <Home></Home>,
             },
             {
                 path: "/availablefoods",
-                loader:()=>fetch('http://localhost:5000/addfoods'),
-                element: <Privetrout><AvailableFoods></AvailableFoods></Privetrout>,
+                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
+                element:<AvailableFoods></AvailableFoods>,
             },
             {
                 path: "/addfood",
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/managefoods",
-                loader:()=>fetch('http://localhost:5000/addfoods'),
+                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
                 element: <Privetrout><Managefoods></Managefoods></Privetrout>,
             },
             {
@@ -52,8 +53,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/singlepagedetails/:id",
-                loader:({params})=> fetch(`http://localhost:5000/addfoods/${params.id}`),
+                loader:({params})=> fetch(`https://commuinity-food-server.vercel.app/addfoods/${params.id}`),
                 element:<Privetrout><Singlepage></Singlepage> </Privetrout>,
+            },
+            {
+                path: "/manage/:id",
+                loader:({params})=> fetch(`https://commuinity-food-server.vercel.app/addfoods/${params.id}`),
+                element:<Privetrout><Manage></Manage></Privetrout>,
             },
         ]
     },
