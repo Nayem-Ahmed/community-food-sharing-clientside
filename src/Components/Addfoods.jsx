@@ -21,7 +21,7 @@ const Addfoods = () => {
         const addfood = {food_image,food_name,donator_image,donator_name,food_quantity,pickup_location,expired_date_time,additional_notes,donator_email}
 
         // send data database
-        fetch('http://localhost:5000/addfoods',{
+        fetch('https://community-food-sharing-server-rho.vercel.app/addfoods',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

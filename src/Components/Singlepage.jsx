@@ -18,7 +18,7 @@ const Singlepage = () => {
 
         const request = { food_image, food_name, donator_image, donator_name, food_quantity, pickup_location, expired_date_time, additional_notes, donator_email, moneyinput }
         // send data database
-        fetch('http://localhost:5000/request', {
+        fetch('https://community-food-sharing-server-rho.vercel.app/request', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

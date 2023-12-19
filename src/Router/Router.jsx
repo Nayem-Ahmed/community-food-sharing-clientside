@@ -22,12 +22,12 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
+                loader:()=>fetch('https://community-food-sharing-server-rho.vercel.app/addfoods'),
                 element: <Home></Home>,
             },
             {
                 path: "/availablefoods",
-                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
+                loader:()=>fetch('https://community-food-sharing-server-rho.vercel.app/addfoods'),
                 element:<AvailableFoods></AvailableFoods>,
             },
             {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/managefoods",
-                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
+                loader:()=>fetch('https://community-food-sharing-server-rho.vercel.app/addfoods'),
                 element: <Privetrout><Managefoods></Managefoods></Privetrout>,
             },
             {
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "/singlepagedetails/:id",
-                loader:({params})=> fetch(`https://commuinity-food-server.vercel.app/addfoods/${params.id}`),
+                loader:({params})=> fetch(`https://community-food-sharing-server-rho.vercel.app/addfoods/${params.id}`),
                 element:<Privetrout><Singlepage></Singlepage> </Privetrout>,
             },
             {
                 path: "/manage/:id",
-                loader:({params})=> fetch(`https://commuinity-food-server.vercel.app/addfoods/${params.id}`),
+                loader:({params})=> fetch(`https://community-food-sharing-server-rho.vercel.app/addfoods/${params.id}`),
                 element:<Privetrout><Manage></Manage></Privetrout>,
             },
         ]

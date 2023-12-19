@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import { AuthContext } from '../../Provider/Authprovider';
+import Headroom from 'react-headroom';
 
 const Navbar = () => {
     const {user,logOut} = useContext(AuthContext);
@@ -14,7 +15,8 @@ const Navbar = () => {
     <li><NavLink to="/foodrequest">My Food Request</NavLink></li>
     </>
     return (
-        // fixed left-0 top-0 z-20 w-[100%]
+         <Headroom>
+
         <div className="navbar bg-base-100 shadow-md">  
             <div className="navbar-start">
                 <div className="dropdown">
@@ -49,6 +51,7 @@ const Navbar = () => {
                 }
             </div>
         </div>
+         </Headroom>
     );
 };
 
